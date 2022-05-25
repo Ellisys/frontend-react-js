@@ -1,0 +1,159 @@
+.login article {
+    max-width: 420px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px;
+    background: url(./assets/img/moutain.jpg);
+    border-radius: 8px;
+    background-color: #ffffffe1;
+    color: #7d7784;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form .inputTxt {
+    width: 100%;
+    background-color: transparent;
+}
+
+form input {
+    border: none;
+    border-bottom: 1px solid #7d7784;
+    margin: .5rem 0;
+    padding: .5rem 0;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+form input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+form label a {
+    color: #59555e;
+    text-decoration: underline;
+}
+
+.cadastro {
+    display: none;
+}
+
+.dNone {
+    visibility: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: .5s;  
+}
+
+.dBlock {
+    display: block;
+    opacity: 1;
+    transition: 2s;  
+}
+
+.btnDesktop {
+    display: none;
+}
+.sucesso{
+    background-color: #06be00;
+    width: 100%;
+    padding: .3rem 0;
+    display: block;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+}
+.falha{
+    background-color: #ee0202;
+    width: 100%;
+    padding: .3rem 0;
+    display: block;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+}
+.aviso{
+    background-color: #eed202;
+    border-radius: 4px;
+    padding: .3rem 0;
+    width: 100%;
+    display: block;
+    color: white;
+    text-align: center;
+    
+}
+@media (min-width:1024px) {
+    .login {
+        display: flex !important;
+        position: absolute;
+        right: 0;
+        transition: 1s;
+        height: 100%;
+        z-index: 5;
+    }
+    .login article {
+        max-width: initial;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0;
+        padding: 0 10%;
+        transition: 1s;
+    }
+    .cadastro {
+        z-index: 4;
+        right: 100%;
+        opacity: 0;
+        transition: 1s;
+    }
+    .openCad {
+        right: 50%;
+        opacity: 1;
+    }
+    .login article h2 {
+        align-self: flex-start;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    form {
+        height: 30%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    form input {
+        font-size: 1.1rem;
+    }
+
+    .btnDesktop {
+        display: flex;
+    }
+
+    .btnDesktop div:nth-child(2) {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+
+    .login .bg-login {
+        display: none;
+    }
+
+    .closeCad {
+        visibility: hidden;
+        right: -50%;
+        opacity: 0;
+    }
+
+    .openBtn {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
