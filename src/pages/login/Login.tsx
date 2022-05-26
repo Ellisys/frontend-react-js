@@ -55,6 +55,8 @@ function loginUsuario(e) {
                     if (response.status == 200) {
                         alerta!.innerText = "Usuário logado com sucesso!"
                         alerta!.classList.add("sucesso")
+                        e.target[0].value = null
+                        e.target[1].value = null
                     }
                 })
                 .catch(function (error) {
@@ -101,6 +103,9 @@ function cadastrarUsuario(e) {
                     if (response.status == 200) {
                         alerta!.innerText = "Usuário cadastrado com sucesso!"
                         alerta!.classList.add("sucesso")
+                        e.target[0].value = null
+                        e.target[1].value = null
+                        e.target[2].value = null
                     }
                 })
                 .catch(function (error) {
@@ -138,13 +143,13 @@ function Login() {
                         </div>
 
                         <Btn text="Log In" />
-
+                        <Links text="Cadastro" href="#" />
                     </form>
 
-                    <Links text="Cadastro" href="#" />
+                    
                 </article>
 
-                <BgLogin pTxt="Criar uma conta" btnTxt="Cadastrar" func={mudarCadastro} />
+                <BgLogin pTxt="Crie uma conta" btnTxt="Cadastrar" func={mudarCadastro} />
 
             </section>
 
@@ -167,19 +172,17 @@ function Login() {
                             <label htmlFor="cb-termos">Aceito as <a href="#">políticas</a> de privacidade e <a href="#">termos</a> de uso.</label>
                         </div>
                         <Btn text="Cadastrar" />
-
+                        <Links text="Log in" href="#" />
                     </form>
 
-                    <Links text="Log in" href="#" />
-
                 </article>
-                <BgLogin pTxt="Já tem uma conta" btnTxt="Login" func={mudarCadastro} />
+                <BgLogin pTxt="Já tem uma conta?" btnTxt="Login" func={mudarCadastro} />
 
             </section>
 
             <div className="btnDesktop">
-                <BgLogin pTxt="Criar uma conta" btnTxt="Cadastrar" func={mudarCadastro} />
-                <BgLogin pTxt="Já tem uma conta" btnTxt="Login" func={mudarCadastro} />
+                <BgLogin pTxt="Crie uma conta" btnTxt="Cadastrar" func={mudarCadastro} />
+                <BgLogin pTxt="Já tem uma conta?" btnTxt="Login" func={mudarCadastro} />
             </div>
 
         </>

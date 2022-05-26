@@ -27,6 +27,20 @@ export default createGlobalStyle`
         flex-direction: column;
         justify-content: center;
     }
+
+    .ripple {
+        background-position: center;
+        transition: background 0.8s;
+      }
+      .ripple:hover {
+        background: #3d41a3 radial-gradient(circle, transparent 1%, #3a3d99 1%) center/15000%;
+      }
+      .ripple:active {
+        background-color: #9498ff;
+        background-size: 100%;
+        transition: background 0s;
+      }
+
     @media (min-width:1024px){
         .root{
             flex-direction: row;
