@@ -24,7 +24,7 @@ $ yarn dev
  ### Ferramentas utilizadas
  
  ##### Frontend
- * React
+ * React - TypeScript
  * HTML5
  * CSS3 - styled components
  
